@@ -15,7 +15,6 @@ import seniorlabs.challenge.softwareengineer.hcm.events.ConsumidorEvento;
 public class AplicacaoConsumer {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(AplicacaoConsumer.class, args);
 		AplicacaoConsumer aplicacao = new AplicacaoConsumer();
 		aplicacao.iniciar();
 	}
