@@ -6,7 +6,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import seniorlabs.challenge.softwareengineer.hcm.contrroller.responses.Response;
 import seniorlabs.challenge.softwareengineer.hcm.model.documents.PontosMarcados;
-import seniorlabs.challenge.softwareengineer.hcm.model.utils.MarcacaoPontoUtil;
 import seniorlabs.challenge.softwareengineer.hcm.model.utils.MarcacaoUtil;
 import seniorlabs.challenge.softwareengineer.hcm.service.PontosMarcadosService;
 
@@ -20,6 +19,7 @@ import java.util.Optional;
  *
  * @author Jonathas Rocha
  */
+@CrossOrigin
 @RestController
 @RequestMapping(path = "/api/marcacaoponto")
 public class PontosMarcadosController {
