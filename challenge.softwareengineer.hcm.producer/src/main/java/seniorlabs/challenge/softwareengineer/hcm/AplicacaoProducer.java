@@ -16,14 +16,6 @@ public class AplicacaoProducer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AplicacaoProducer.class, args);
-		AplicacaoProducer aplicacao = new AplicacaoProducer();
-		aplicacao.iniciarProducer();
-	}
-
-	private void iniciarProducer() {
-		log.info("Iniciando a aplicação");
-		ProdutorEvento produtor = new ProdutorEvento();
-		produtor.executar();
 	}
 
 }

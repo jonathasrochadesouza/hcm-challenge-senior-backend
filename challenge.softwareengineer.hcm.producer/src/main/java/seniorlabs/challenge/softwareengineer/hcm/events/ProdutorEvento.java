@@ -11,7 +11,7 @@ import java.util.Properties;
 import java.util.UUID;
 
 /**
- * Realiza a produção do evento
+ * Realiza a produção dos eventos
  *
  * @author Jonathas Rocha
  */
@@ -37,13 +37,14 @@ public class ProdutorEvento {
         return new KafkaProducer<String, String>(properties);
     }
 
-    public void executar() {
+    public void executar(String data, String colaboradorId, String empresaId) {
         String chave = UUID.randomUUID().toString();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-        String mensagem = sdf.format(new Date());
-        mensagem += "|" + chave;
-        mensagem += "|NOVA_MENSAGEM";
+        String mensagem = "Data do registro do ponto: " + data + ", "
+                + "Identificador do colaborador: " + colaboradorId + ", "
+                + "Identificador da empresa: " + empresaId;
+
+        mensagem += " | CHAVE: " + chave;
 
         log.info("Iniciando envio da mensagem");
 

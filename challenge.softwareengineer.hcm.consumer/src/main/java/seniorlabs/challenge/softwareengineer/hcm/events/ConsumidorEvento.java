@@ -15,6 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * Consome os eventos.
+ *
+ * @author Jonathas Rocha
+ */
 @Slf4j
 public class ConsumidorEvento {
 
@@ -24,6 +29,11 @@ public class ConsumidorEvento {
         consumer = criarConsumer();
     }
 
+    /**
+     * Configuração do Apache Kafka.
+     *
+     * @return {@link KafkaConsumer}
+     */
     private KafkaConsumer<String, String> criarConsumer() {
         if (consumer != null) {
             return consumer;
@@ -38,6 +48,9 @@ public class ConsumidorEvento {
         return new KafkaConsumer<String, String>(properties);
     }
 
+    /**
+     * Executa a leitura dos eventos.
+     */
     public void executar() {
         List<String> topicos = new ArrayList<>();
         topicos.add("RegistroEvento");
@@ -59,8 +72,18 @@ public class ConsumidorEvento {
         consumer.close();
     }
 
+    /**
+     * Grava a mensagem e Chama o sistema legado.
+     * Aqui seria possível ainda salvar os dados em um banco, retornar outra mensagem...
+     *
+     * @param topico
+     * @param particao
+     * @param mensagem
+     */
     private void gravarMensagem(String topico, int particao, String mensagem) {
         log.info("Topico:{}, Partição:{}, Mensagem:{}", topico, particao, mensagem);
+
+        ConexaoSistemaLegado();
     }
 
     /**
