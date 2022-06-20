@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/challenge.softwareengineer.hcm/pom.xml" />
+        <option value="$PROJECT_DIR$/challenge.softwareengineer.hcm.producer/pom.xml" />
+        <option value="$PROJECT_DIR$/challenge.softwareengineer.hcm.consumer/pom.xml" />
       </list>
     </option>
   </component>
