@@ -1,4 +1,4 @@
-package seniorlabs.challenge.softwareengineer.hcm.producer.events;
+package seniorlabs.challenge.softwareengineer.hcm.events;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;

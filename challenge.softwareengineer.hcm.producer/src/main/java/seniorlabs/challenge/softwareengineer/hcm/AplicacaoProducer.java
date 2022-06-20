@@ -3,20 +3,20 @@ package seniorlabs.challenge.softwareengineer.hcm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import seniorlabs.challenge.softwareengineer.hcm.producer.events.ProdutorEvento;
+import seniorlabs.challenge.softwareengineer.hcm.events.ProdutorEvento;
 
 /**
- * Aplicação, classe que permite rodar a aplicação
+ * Permite executar a aplicação Producer
  *
  * @author Jonathas Rocha
  */
 @Slf4j
 @SpringBootApplication
-public class ApplicationProducer {
+public class AplicacaoProducer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApplicationProducer.class, args);
-		ApplicationProducer aplicacao = new ApplicationProducer();
+		SpringApplication.run(AplicacaoProducer.class, args);
+		AplicacaoProducer aplicacao = new AplicacaoProducer();
 		aplicacao.iniciarProducer();
 	}
 
